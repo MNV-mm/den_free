@@ -23,7 +23,7 @@ v = TestFunction(nFS)
 
 kk = 1000 #1054# erg/cm**3 - unaxial anisotropy constant
 M_s = 3.46
-t0 = 1*45/180*math.pi
+t0 = 0*45/180*math.pi
 
 ub = Expression(("0", "-sin(2*atan(exp(x[1]/d)))*cos(a) + cos(2*atan(exp(x[1]/d)))*sin(a)", "sin(a)*sin(2*atan(exp(x[1]/d))) + cos(2*atan(exp(x[1]/d)))*cos(a)"), degree = 4, d=1, a = t0)
 m = project(ub,nFS3)
