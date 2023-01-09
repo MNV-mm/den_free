@@ -8,8 +8,10 @@ Created on Sat Jan  7 13:34:24 2023
 
 from fenics import *
 import math
-
-mesh = Mesh("/home/mnv/Documents/python_doc/llg_nl/MESH.xml")
+Lx = 60
+Ly = 40
+mesh = RectangleMesh(Point(-Lx/2,-Ly/2),Point(Lx/2,Ly/2),int(2*Lx),int(2*Ly))
+#mesh = Mesh("/home/mnv/Documents/python_doc/llg_nl/MESH.xml")
 
 El = FiniteElement('CG', triangle, 1)
 nFS = FunctionSpace(mesh, El)
